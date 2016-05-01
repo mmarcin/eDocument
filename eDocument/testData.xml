@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DocumentData>
+  <ApplicationName>eProcurement</ApplicationName>
+  <ApplicationURL>https://portal.eprocurement.sk</ApplicationURL>
+  
+  <fields>
+    <field id="ProcurerTitle">
+      <fieldName>ProcurerTitle</fieldName>
+      <fieldValue>Procurio s.r.o.</fieldValue>
+    </field>
+    <field id="ProcurerAddress">
+      <fieldName>ProcurerAddress</fieldName>
+      <fieldValue>Cintorínska 7 Bratislava</fieldValue>
+    </field>  
+  </fields>
+
+  <queries>
+    <query id="1">
+      <sql>SELECT ProcurementCode, ProcurementTitle FROM pro_tProcurement WHERE InstanceID = 9 ORDER BY ProcurementTitle</sql>
+      <tableName>Procurements</tableName>
+    </query>
+    <query id="2">
+      <sql>SELECT ContractCode, ContractTitle FROM cnt_tContract WHERE InstanceID = 18</sql>
+      <tableName>Contracts</tableName>
+    </query>  
+  </queries>
+  
+</DocumentData>
