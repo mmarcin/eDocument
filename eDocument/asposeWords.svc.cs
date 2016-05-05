@@ -50,25 +50,42 @@ namespace eDocument
             XmlDocument xml = new XmlDocument();
             xml.LoadXml(XMLData);
 
-            XmlNodeList counter = xml.GetElementsByTagName("fieldName");
+            // get the number of field nodes and declare arrays
+            XmlNodeList fieldCounter = xml.GetElementsByTagName("fieldName");
 
-            String[] names = new String[counter.Count];
-            Object[] values = new Object[counter.Count];
+            String[] names = new String[fieldCounter.Count];
+            Object[] values = new Object[fieldCounter.Count];
 
+            //get field names
             XmlNodeList elemList = xml.GetElementsByTagName("fieldName");
             for (int i = 0; i < elemList.Count; i++)
             {
                 names[i] = elemList[i].InnerXml;
             }
 
+            //get field values
             XmlNodeList elemList2 = xml.GetElementsByTagName("fieldValue");
             for (int i = 0; i < elemList2.Count; i++)
             {
                 values[i] = elemList2[i].InnerXml;
             }
 
+            // initialise wrapper
             asposeWordsWrapper AWW = new asposeWordsWrapper(ApplicationName, TemplateDir, TemplateName, OutputDir, OutputDocumentName);
+
+            // execute simple mail merge
             AWW.Execute(names, values);
+
+            //loop over queries
+            var bookNodes = xml.SelectNodes(@"//queries/query");
+            foreach (XmlNode item in bookNodes)
+            {
+                string sqlStatement = item.SelectSingleNode("./sql").InnerText;
+                string tableName = item.SelectSingleNode("./tableName").InnerText;
+                Console.WriteLine("title {0} price: {1}", sqlStatement, tableName); //just for demo
+                AWW.ExecuteRegions(sqlStatement, tableName);
+            }
+
             AWW.Save();
             return "Success";
         }
