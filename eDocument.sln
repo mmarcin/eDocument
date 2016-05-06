@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eDocument", "eDocument\eDocument.csproj", "{FAAE7F14-3DD3-4925-A13B-B17F8ADFD52F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eDocument.Tests", "eDocument.Tests\eDocument.Tests.csproj", "{F58DCE2A-5600-420A-812F-E93856181CEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{FAAE7F14-3DD3-4925-A13B-B17F8ADFD52F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAAE7F14-3DD3-4925-A13B-B17F8ADFD52F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAAE7F14-3DD3-4925-A13B-B17F8ADFD52F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F58DCE2A-5600-420A-812F-E93856181CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F58DCE2A-5600-420A-812F-E93856181CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F58DCE2A-5600-420A-812F-E93856181CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F58DCE2A-5600-420A-812F-E93856181CEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
