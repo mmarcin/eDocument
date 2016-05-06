@@ -6,7 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Aspose.Words;
+using Aspose.Words.MailMerging;
 using System.Configuration;
+
 
 namespace asposeWR
 {
@@ -43,6 +45,23 @@ namespace asposeWR
         {
             DataTable TableWithData = GetDatabaseResults(ApplicationName, SelectString, TableName);  // Get Data
             doc.MailMerge.ExecuteWithRegions(TableWithData);                        // Make MailMerge With regions            
+        }
+
+        // Remove unused regions
+        public void RemoveUnusedFields()
+        {
+            doc.MailMerge.CleanupOptions = MailMergeCleanupOptions.RemoveUnusedFields;
+        }
+
+        // Remove unused regions
+        public void RemoveUnusedRegions() {
+            doc.MailMerge.CleanupOptions = MailMergeCleanupOptions.RemoveUnusedRegions;
+        }
+
+        // Remove unused regions
+        public void RemoveEmptyParagraphs()
+        {
+            doc.MailMerge.CleanupOptions = MailMergeCleanupOptions.RemoveEmptyParagraphs;
         }
 
         //save of the filled document

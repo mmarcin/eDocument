@@ -12,13 +12,8 @@ namespace eDocument
     [ServiceContract]
     public interface IasposeWords
     {
-        [OperationContract]
-        string EchoWithGet(string s);
 
         [OperationContract]
-        string EchoWithPost(string s);
-
-        [OperationContract]
-        string fillWordTemplate(string ApplicationName, string TemplateName, string OutputDocumentName, string XMLData, string TemplateDir = "", string OutputDir = "");
+        string fillWordTemplate(string ApplicationName, string TemplateName, string OutputDocumentName, string XMLData, string TemplateDir = "", string OutputDir = "", string RemoveUnusedFields = "no", string RemoveUnusedRegions = "no", string RemoveEmptyParagraphs = "no");
     }
 }

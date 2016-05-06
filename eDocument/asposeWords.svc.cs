@@ -16,18 +16,9 @@ namespace eDocument
     // NOTE: In order to launch WCF Test Client for testing this service, please select asposeWords.svc or asposeWords.svc.cs at the Solution Explorer and start debugging.
     public class asposeWords : IasposeWords
     {
-        public string EchoWithGet(string s)
-        {
-            return "You said " + s;
-        }
-
-        public string EchoWithPost(string s)
-        {
-            return "You said " + s;
-        }
 
         //fills the Word template with XML Data
-        public string fillWordTemplate(string ApplicationName,string TemplateName, string OutputDocumentName, string XMLData, string TemplateDir = "", string OutputDir = "")
+        public string fillWordTemplate(string ApplicationName,string TemplateName, string OutputDocumentName, string XMLData, string TemplateDir = "", string OutputDir = "", string RemoveUnusedFields = "no", string RemoveUnusedRegions = "no", string RemoveEmptyParagraphs = "no")
         {
             
             if (TemplateDir == "")
@@ -72,6 +63,24 @@ namespace eDocument
 
             // initialise wrapper
             asposeWordsWrapper AWW = new asposeWordsWrapper(ApplicationName, TemplateDir, TemplateName, OutputDir, OutputDocumentName);
+
+            // remove unused fields
+            if (RemoveUnusedFields == "yes")
+            {
+                AWW.RemoveUnusedFields();
+            }
+
+            // remove unused regions
+            if (RemoveUnusedRegions == "yes")
+            {
+                AWW.RemoveUnusedRegions();
+            }
+
+            // remove empty paragraphs
+            if (RemoveUnusedRegions == "yes")
+            {
+                AWW.RemoveEmptyParagraphs();
+            }
 
             // execute simple mail merge
             AWW.Execute(names, values);
