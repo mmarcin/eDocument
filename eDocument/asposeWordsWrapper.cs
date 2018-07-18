@@ -21,6 +21,8 @@ namespace asposeWR
 
         public string OutputDir;            // Dir, where the output file will be written - c:/temp/
         public string OutputDocumentName;   // OutputFile.docx
+        public string OutputPDFName;        // OttputFIle.docx.pdf
+        public string OutputHTMLName;        // OttputFIle.docx.html
 
         public Document doc = new Document();
 
@@ -31,17 +33,30 @@ namespace asposeWR
             this.TemplateName = TemplateName;
             this.OutputDir = OutputDir;
             this.OutputDocumentName = OutputDocumentName;
+            this.OutputPDFName = OutputDocumentName + ".pdf";
+            this.OutputHTMLName = OutputDocumentName + ".html";
+
+            Aspose.Words.License awLic = new Aspose.Words.License();
+            awLic.SetLicense("Aspose.Total.lic");
+
             doc = new Document(this.TemplateDir + this.TemplateName);  // Create Aspose document object
+            
         }
 
         //Simple mail merge
         public void Execute(string[] names, object[] values)
         {
-            doc.MailMerge.Execute(names, values);
+            doc.MailMerge.Execute(names, values);            
         }
 
-        //region mail merge
-        public void ExecuteRegions(string SelectString, string TableName)
+        //region mail merge with datasource
+        public void ExecuteRegions(DataSet DSRegion)
+        {            
+            doc.MailMerge.ExecuteWithRegions(DSRegion);                        // Make MailMerge With dataset            
+        }
+
+        //region mail merge with SQL
+        public void ExecuteRegionsSQL(string SelectString, string TableName)
         {
             DataTable TableWithData = GetDatabaseResults(ApplicationName, SelectString, TableName);  // Get Data
             doc.MailMerge.ExecuteWithRegions(TableWithData);                        // Make MailMerge With regions            
@@ -68,6 +83,13 @@ namespace asposeWR
         public void Save()
         {
             doc.Save(this.OutputDir + this.OutputDocumentName); // Save the result
+
+            Document PDFdoc = new Document(this.OutputDir + this.OutputDocumentName);
+            PDFdoc.Save(this.OutputDir + this.OutputPDFName, SaveFormat.Pdf); //Save the result as PDF
+
+            Document HTMLdoc = new Document(this.OutputDir + this.OutputDocumentName);
+            HTMLdoc.Save(this.OutputDir + this.OutputHTMLName, SaveFormat.Html); //Save the result as HTML
+
         }
 
 
@@ -98,6 +120,7 @@ namespace asposeWR
 
             return table;
         }
+
     }
 
 }

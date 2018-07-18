@@ -1,0 +1,7 @@
+﻿<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <fillWordTemplateResponse xmlns="http://tempuri.org/">
+      <fillWordTemplateResult>http://local.edokumenty.sk/storage//P9QVY36P4IDAEMLX.docx</fillWordTemplateResult>
+    </fillWordTemplateResponse>
+  </s:Body>
+</s:Envelope>

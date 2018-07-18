@@ -2,27 +2,489 @@
 <DocumentData>
   <ApplicationName>eProcurement</ApplicationName>
   <ApplicationURL>https://portal.eprocurement.sk</ApplicationURL>
-  
   <fields>
-    <field id="ProcurerTitle">
-      <fieldName>ProcurerTitle</fieldName>
-      <fieldValue>Procurio s.r.o.</fieldValue>
+    <field id="RequestID">
+      <fieldName>RequestID</fieldName>
+      <fieldValue>180538</fieldValue>
     </field>
-    <field id="ProcurerAddress">
-      <fieldName>ProcurerAddress</fieldName>
-      <fieldValue>Cintorínska 7 Bratislava</fieldValue>
-    </field>  
+    <field id="RequestTitle">
+      <fieldName>RequestTitle</fieldName>
+      <fieldValue>TEST Sablonqui</fieldValue>
+    </field>
+    <field id="RequestorFullName">
+      <fieldName>RequestorFullName</fieldName>
+      <fieldValue>Bedn&#xe1;r Milan Bc.</fieldValue>
+    </field>
+    <field id="RequestorBusinessUnitTitle">
+      <fieldName>RequestorBusinessUnitTitle</fieldName>
+      <fieldValue>Root</fieldValue>
+    </field>
+    <field id="RequestorContactInfo">
+      <fieldName>RequestorContactInfo</fieldName>
+      <fieldValue></fieldValue>
+    </field>
+    <field id="CreatorFullName">
+      <fieldName>CreatorFullName</fieldName>
+      <fieldValue>Marcin Matej</fieldValue>
+    </field>
+    <field id="CreatorContactInfo">
+      <fieldName>CreatorContactInfo</fieldName>
+      <fieldValue>matej.marcin@gmail.com </fieldValue>
+    </field>
+    <field id="RequestObjectTitle">
+      <fieldName>RequestObjectTitle</fieldName>
+      <fieldValue>Tovary</fieldValue>
+    </field>
+    <field id="RequestCPVFullName">
+      <fieldName>RequestCPVFullName</fieldName>
+      <fieldValue>32413100-2 - Sieťov&#xe9; smerovače</fieldValue>
+    </field>
+    <field id="RequestEstimatedDateForm">
+      <fieldName>RequestEstimatedDate</fieldName>
+      <fieldValue>08.03.2017</fieldValue>
+    </field>
+    <field id="RequestEstimatedDateTo">
+      <fieldName>RequestEstimatedDate</fieldName>
+      <fieldValue>08.03.2017</fieldValue>
+    </field>
+    <field id="AgreementTypeTitle">
+      <fieldName>AgreementTypeTitle</fieldName>
+      <fieldValue></fieldValue>
+    </field>
+    <field id="RequestDescription">
+      <fieldName>RequestDescription</fieldName>
+      <fieldValue>Nutn&#xe1; obmena akt&#xed;vnych koncov&#xfd;ch zariaden&#xed; na staniciach ZZS z d&#xf4;vodu zastaranosti (Koncov&#xe9; zariadenia od roku 2006). Obmena zn&#xed;ž v&#xfd;padky internetov&#xfd;ch pripojen&#xed; a vytvor&#xed; stabiln&#xe9; hardv&#xe9;rov&#xe9; VPN spojenie. Predmetom obstar&#xe1;vania s&#xfa; tiež akt&#xed;vne prvky pre vytvorenie bezpečnej bezdr&#xf4;tovej siete Wifi oddelenej od pracovnej siete - centr&#xe1;lne riadenie. Akt&#xed;vne prvky - Routre SBG3500: 35ks Pr&#xed;stupov&#xfd; bezdr&#xf4;tov&#xfd; bod: 1ks Firewall: 1ks Manažovateľn&#xfd; switch: 1ks</fieldValue>
+    </field>
+    <field id="VariantsAllowedText">
+      <fieldName>VariantsAllowedText</fieldName>
+      <fieldValue>&#xe1;no</fieldValue>
+    </field>
+    <field id="Created">
+      <fieldName>Created</fieldName>
+      <fieldValue>02.02.2018</fieldValue>
+    </field>
+    <field id="GenerateDate">
+      <fieldName>GenerateDate</fieldName>
+      <fieldValue>05.02.2018</fieldValue>
+    </field>
+    <field id="RequestEstimatedValue">
+      <fieldName>RequestEstimatedValue</fieldName>
+      <fieldValue>510.00</fieldValue>
+    </field>
+    <field id="UnitEstimatedValue">
+      <fieldName>UnitEstimatedValue</fieldName>
+      <fieldValue>510.00</fieldValue>
+    </field>
+    <field id="EstimatedValueCurrency">
+      <fieldName>EstimatedValueCurrency</fieldName>
+      <fieldValue>EUR</fieldValue>
+    </field>
+    <field id="Quantity">
+      <fieldName>Quantity</fieldName>
+      <fieldValue>1</fieldValue>
+    </field>
+    <field id="Unit">
+      <fieldName>Unit</fieldName>
+      <fieldValue>ks</fieldValue>
+    </field>
+    <field id="SourceFinancing">
+      <fieldName>SourceFinancing</fieldName>
+      <fieldValue>VZ</fieldValue>
+    </field>
+    <field id="FunctionalSpecification">
+      <fieldName>FunctionalSpecification</fieldName>
+      <fieldValue></fieldValue>
+    </field>
+    <field id="TechnicalSpecification">
+      <fieldName>TechnicalSpecification</fieldName>
+      <fieldValue></fieldValue>
+    </field>
+    <field id="ExtraSpecification">
+      <fieldName>ExtraSpecification</fieldName>
+      <fieldValue></fieldValue>
+    </field>
+    <field id="SpecificationPersonName">
+      <fieldName>SpecificationPersonName</fieldName>
+      <fieldValue></fieldValue>
+    </field>
+    <field id="SpecificationUserEmail">
+      <fieldName>SpecificationUserEmail</fieldName>
+      <fieldValue></fieldValue>
+    </field>
+    <field id="ProcurerName">
+      <fieldName>ProcurerName</fieldName>
+      <fieldValue></fieldValue>
+    </field>
+    <field id="ProcurementCode">
+      <fieldName>ProcurementCode</fieldName>
+      <fieldValue></fieldValue>
+    </field>
+    <field id="ExtraSpecification">
+      <fieldName>ExtraSpecification</fieldName>
+      <fieldValue></fieldValue>
+    </field>
+    <field id="PlaceOfDelivery">
+      <fieldName>PlaceOfDelivery</fieldName>
+      <fieldValue></fieldValue>
+    </field>
+    <field id="EstimatedDateFrom">
+      <fieldName>EstimatedDateFrom</fieldName>
+      <fieldValue>08.03.2017</fieldValue>
+    </field>
+    <field id="EstimatedDateTo">
+      <fieldName>EstimatedDateTo</fieldName>
+      <fieldValue></fieldValue>
+    </field>
   </fields>
-
-  <queries>
-    <query id="1">
-      <sql>SELECT ProcurementCode, ProcurementTitle FROM pro_tProcurement WHERE InstanceID = 9 ORDER BY ProcurementTitle</sql>
-      <tableName>Procurements</tableName>
-    </query>
-    <query id="2">
-      <sql>SELECT ContractCode, ContractTitle FROM cnt_tContract WHERE InstanceID = 18</sql>
-      <tableName>Contracts</tableName>
-    </query>  
-  </queries>
-  
+  <datatables>
+    <datatable>
+      <tableName>RequestItems</tableName>
+      <tableData>
+        <RequestItems>
+          <RequestItem>
+            <agreementtype></agreementtype>
+            <approvalworkflowid>164092</approvalworkflowid>
+            <approvalworkflowsystem>eProcurement</approvalworkflowsystem>
+            <archive></archive>
+            <budgetitemcode></budgetitemcode>
+            <budgetprojectid>0</budgetprojectid>
+            <budgetprojecttitle></budgetprojecttitle>
+            <budgetresourceid>2</budgetresourceid>
+            <budgetresourcetitle></budgetresourcetitle>
+            <businessunitid>412</businessunitid>
+            <category>T</category>
+            <collectiverequestjoinallowed>yes</collectiverequestjoinallowed>
+            <compositerequest>no</compositerequest>
+            <contractid></contractid>
+            <contractperiod></contractperiod>
+            <cpvmainid>0</cpvmainid>
+            <cpvsuppidlist></cpvsuppidlist>
+            <created>2018-02-05 13:53:47.283</created>
+            <creatorid>1</creatorid>
+            <descriptiveformcode></descriptiveformcode>
+            <endjoindate></endjoindate>
+            <estimateddatefrom></estimateddatefrom>
+            <estimateddateto></estimateddateto>
+            <estimatedvalue>10.00</estimatedvalue>
+            <estimatedvaluecurrency>EUR</estimatedvaluecurrency>
+            <estimatedvaluevat>no</estimatedvaluevat>
+            <extraspecification></extraspecification>
+            <functionalspecification></functionalspecification>
+            <itmscode></itmscode>
+            <lastupdated></lastupdated>
+            <operatorid>1</operatorid>
+            <ordernumber>1</ordernumber>
+            <originalestimatedvalue>10.00</originalestimatedvalue>
+            <ownerid>1</ownerid>
+            <parentrequestid>180538</parentrequestid>
+            <periodicity>once</periodicity>
+            <placeofdeliverydescription></placeofdeliverydescription>
+            <planitemid></planitemid>
+            <planrequestid></planrequestid>
+            <priority>0</priority>
+            <procurementdescriptiveformcode></procurementdescriptiveformcode>
+            <procurementfinished>no</procurementfinished>
+            <procurementfinishedbypersonid></procurementfinishedbypersonid>
+            <procurementresulturl></procurementresulturl>
+            <procurementvalue>0.00</procurementvalue>
+            <procurementvaluecurrency></procurementvaluecurrency>
+            <procurementvaluevat>no</procurementvaluevat>
+            <quantity>1</quantity>
+            <referencescount></referencescount>
+            <requestargument></requestargument>
+            <requestdescription></requestdescription>
+            <requestid>180548</requestid>
+            <requestnature>procurement</requestnature>
+            <requestorcontact></requestorcontact>
+            <requestorid>1</requestorid>
+            <requestorname></requestorname>
+            <requesttitle>Polozka 1</requesttitle>
+            <rerencescoun></rerencescoun>
+            <rerencescount></rerencescount>
+            <sourcefinancing></sourcefinancing>
+            <specificationpersoncontact></specificationpersoncontact>
+            <specificationpersonid>0</specificationpersonid>
+            <specificationpersonname></specificationpersonname>
+            <startjoindate></startjoindate>
+            <status>preparing</status>
+            <subrequestsorderby>RequestTitle</subrequestsorderby>
+            <technicalspecification></technicalspecification>
+            <tendercode></tendercode>
+            <type>composite</type>
+            <unit></unit>
+            <unitestimatedvalue>10.00</unitestimatedvalue>
+            <variantsallowed>yes</variantsallowed>
+            <year>2018</year>
+            <RequestItemParameters columns="15" rows="3">
+              <RequestItemParameter>
+                <created>2018-02-05 13:53:47.36</created>
+                <creatorid>1</creatorid>
+                <description></description>
+                <exactvalue></exactvalue>
+                <lastupdated></lastupdated>
+                <maximalvalue></maximalvalue>
+                <minimalvalue>5</minimalvalue>
+                <operatorid></operatorid>
+                <ordernumber>1</ordernumber>
+                <parameterid>247945</parameterid>
+                <parametertitle>P1.1</parametertitle>
+                <requestid>180548</requestid>
+                <status>active</status>
+                <type>default</type>
+                <unit></unit>
+              </RequestItemParameter>
+              <RequestItemParameter>
+                <created>2018-02-05 13:53:47.36</created>
+                <creatorid>1</creatorid>
+                <description></description>
+                <exactvalue></exactvalue>
+                <lastupdated></lastupdated>
+                <maximalvalue>7</maximalvalue>
+                <minimalvalue></minimalvalue>
+                <operatorid></operatorid>
+                <ordernumber>2</ordernumber>
+                <parameterid>247946</parameterid>
+                <parametertitle>P1.2</parametertitle>
+                <requestid>180548</requestid>
+                <status>active</status>
+                <type>default</type>
+                <unit></unit>
+              </RequestItemParameter>
+              <RequestItemParameter>
+                <created>2018-02-05 13:53:47.36</created>
+                <creatorid>1</creatorid>
+                <description></description>
+                <exactvalue>9</exactvalue>
+                <lastupdated></lastupdated>
+                <maximalvalue></maximalvalue>
+                <minimalvalue></minimalvalue>
+                <operatorid></operatorid>
+                <ordernumber>3</ordernumber>
+                <parameterid>247947</parameterid>
+                <parametertitle>P1.3</parametertitle>
+                <requestid>180548</requestid>
+                <status>active</status>
+                <type>default</type>
+                <unit></unit>
+              </RequestItemParameter>
+            </RequestItemParameters>
+          </RequestItem>
+          <RequestItem>
+            <agreementtype></agreementtype>
+            <approvalworkflowid>164093</approvalworkflowid>
+            <approvalworkflowsystem>eProcurement</approvalworkflowsystem>
+            <archive></archive>
+            <budgetitemcode></budgetitemcode>
+            <budgetprojectid>0</budgetprojectid>
+            <budgetprojecttitle></budgetprojecttitle>
+            <budgetresourceid>2</budgetresourceid>
+            <budgetresourcetitle></budgetresourcetitle>
+            <businessunitid>412</businessunitid>
+            <category>T</category>
+            <collectiverequestjoinallowed>yes</collectiverequestjoinallowed>
+            <compositerequest>no</compositerequest>
+            <contractid></contractid>
+            <contractperiod></contractperiod>
+            <cpvmainid>0</cpvmainid>
+            <cpvsuppidlist></cpvsuppidlist>
+            <created>2018-02-05 13:53:47.363</created>
+            <creatorid>1</creatorid>
+            <descriptiveformcode></descriptiveformcode>
+            <endjoindate></endjoindate>
+            <estimateddatefrom></estimateddatefrom>
+            <estimateddateto></estimateddateto>
+            <estimatedvalue>500.00</estimatedvalue>
+            <estimatedvaluecurrency>EUR</estimatedvaluecurrency>
+            <estimatedvaluevat>no</estimatedvaluevat>
+            <extraspecification></extraspecification>
+            <functionalspecification></functionalspecification>
+            <itmscode></itmscode>
+            <lastupdated></lastupdated>
+            <operatorid>1</operatorid>
+            <ordernumber>2</ordernumber>
+            <originalestimatedvalue>500.00</originalestimatedvalue>
+            <ownerid>1</ownerid>
+            <parentrequestid>180538</parentrequestid>
+            <periodicity>once</periodicity>
+            <placeofdeliverydescription></placeofdeliverydescription>
+            <planitemid></planitemid>
+            <planrequestid></planrequestid>
+            <priority>0</priority>
+            <procurementdescriptiveformcode></procurementdescriptiveformcode>
+            <procurementfinished>no</procurementfinished>
+            <procurementfinishedbypersonid></procurementfinishedbypersonid>
+            <procurementresulturl></procurementresulturl>
+            <procurementvalue>0.00</procurementvalue>
+            <procurementvaluecurrency></procurementvaluecurrency>
+            <procurementvaluevat>no</procurementvaluevat>
+            <quantity>5</quantity>
+            <referencescount></referencescount>
+            <requestargument></requestargument>
+            <requestdescription></requestdescription>
+            <requestid>180549</requestid>
+            <requestnature>procurement</requestnature>
+            <requestorcontact></requestorcontact>
+            <requestorid>1</requestorid>
+            <requestorname></requestorname>
+            <requesttitle>Polozka 2</requesttitle>
+            <rerencescoun></rerencescoun>
+            <rerencescount></rerencescount>
+            <sourcefinancing></sourcefinancing>
+            <specificationpersoncontact></specificationpersoncontact>
+            <specificationpersonid>0</specificationpersonid>
+            <specificationpersonname></specificationpersonname>
+            <startjoindate></startjoindate>
+            <status>preparing</status>
+            <subrequestsorderby>RequestTitle</subrequestsorderby>
+            <technicalspecification></technicalspecification>
+            <tendercode></tendercode>
+            <type>composite</type>
+            <unit></unit>
+            <unitestimatedvalue>100.00</unitestimatedvalue>
+            <variantsallowed>yes</variantsallowed>
+            <year>2018</year>
+            <RequestItemParameters columns="15" rows="2">
+              <RequestItemParameter>
+                <created>2018-02-05 13:53:47.423</created>
+                <creatorid>1</creatorid>
+                <description></description>
+                <exactvalue></exactvalue>
+                <lastupdated></lastupdated>
+                <maximalvalue></maximalvalue>
+                <minimalvalue>4</minimalvalue>
+                <operatorid></operatorid>
+                <ordernumber>1</ordernumber>
+                <parameterid>247948</parameterid>
+                <parametertitle>P2.1</parametertitle>
+                <requestid>180549</requestid>
+                <status>active</status>
+                <type>default</type>
+                <unit></unit>
+              </RequestItemParameter>
+              <RequestItemParameter>
+                <created>2018-02-05 13:53:47.423</created>
+                <creatorid>1</creatorid>
+                <description></description>
+                <exactvalue></exactvalue>
+                <lastupdated></lastupdated>
+                <maximalvalue></maximalvalue>
+                <minimalvalue>8</minimalvalue>
+                <operatorid></operatorid>
+                <ordernumber>2</ordernumber>
+                <parameterid>247949</parameterid>
+                <parametertitle>P2.3</parametertitle>
+                <requestid>180549</requestid>
+                <status>active</status>
+                <type>default</type>
+                <unit></unit>
+              </RequestItemParameter>
+            </RequestItemParameters>
+          </RequestItem>
+          <RequestItem>
+            <agreementtype></agreementtype>
+            <approvalworkflowid>164094</approvalworkflowid>
+            <approvalworkflowsystem>eProcurement</approvalworkflowsystem>
+            <archive></archive>
+            <budgetitemcode></budgetitemcode>
+            <budgetprojectid>0</budgetprojectid>
+            <budgetprojecttitle></budgetprojecttitle>
+            <budgetresourceid>2</budgetresourceid>
+            <budgetresourcetitle></budgetresourcetitle>
+            <businessunitid>412</businessunitid>
+            <category>T</category>
+            <collectiverequestjoinallowed>yes</collectiverequestjoinallowed>
+            <compositerequest>no</compositerequest>
+            <contractid></contractid>
+            <contractperiod></contractperiod>
+            <cpvmainid>0</cpvmainid>
+            <cpvsuppidlist></cpvsuppidlist>
+            <created>2018-02-05 13:53:47.44</created>
+            <creatorid>1</creatorid>
+            <descriptiveformcode></descriptiveformcode>
+            <endjoindate></endjoindate>
+            <estimateddatefrom></estimateddatefrom>
+            <estimateddateto></estimateddateto>
+            <estimatedvalue>0.00</estimatedvalue>
+            <estimatedvaluecurrency>EUR</estimatedvaluecurrency>
+            <estimatedvaluevat>no</estimatedvaluevat>
+            <extraspecification></extraspecification>
+            <functionalspecification></functionalspecification>
+            <itmscode></itmscode>
+            <lastupdated></lastupdated>
+            <operatorid>1</operatorid>
+            <ordernumber>3</ordernumber>
+            <originalestimatedvalue>0.00</originalestimatedvalue>
+            <ownerid>1</ownerid>
+            <parentrequestid>180538</parentrequestid>
+            <periodicity>once</periodicity>
+            <placeofdeliverydescription></placeofdeliverydescription>
+            <planitemid></planitemid>
+            <planrequestid></planrequestid>
+            <priority>0</priority>
+            <procurementdescriptiveformcode></procurementdescriptiveformcode>
+            <procurementfinished>no</procurementfinished>
+            <procurementfinishedbypersonid></procurementfinishedbypersonid>
+            <procurementresulturl></procurementresulturl>
+            <procurementvalue>0.00</procurementvalue>
+            <procurementvaluecurrency></procurementvaluecurrency>
+            <procurementvaluevat>no</procurementvaluevat>
+            <quantity>1</quantity>
+            <referencescount></referencescount>
+            <requestargument></requestargument>
+            <requestdescription></requestdescription>
+            <requestid>180550</requestid>
+            <requestnature>procurement</requestnature>
+            <requestorcontact></requestorcontact>
+            <requestorid>1</requestorid>
+            <requestorname></requestorname>
+            <requesttitle>Polozka 3 (bez p)</requesttitle>
+            <rerencescoun></rerencescoun>
+            <rerencescount></rerencescount>
+            <sourcefinancing></sourcefinancing>
+            <specificationpersoncontact></specificationpersoncontact>
+            <specificationpersonid>0</specificationpersonid>
+            <specificationpersonname></specificationpersonname>
+            <startjoindate></startjoindate>
+            <status>preparing</status>
+            <subrequestsorderby>RequestTitle</subrequestsorderby>
+            <technicalspecification></technicalspecification>
+            <tendercode></tendercode>
+            <type>composite</type>
+            <unit></unit>
+            <unitestimatedvalue>0.00</unitestimatedvalue>
+            <variantsallowed>yes</variantsallowed>
+            <year>2018</year>
+            <RequestItemParameters columns="15" rows="0"/>
+          </RequestItem>
+        </RequestItems>
+      </tableData>
+    </datatable>
+    <datatable>
+      <tableName>RequestParameters</tableName>
+      <tableData>
+        <RequestParameters columns="15" rows="0"/>
+      </tableData>
+    </datatable>
+    <datatable>
+      <tableName>ApprovalHistoryItems</tableName>
+      <tableData>
+        <ApprovalHistoryItems columns="12" rows="1">
+          <ApprovalHistoryItem>
+            <activityid>1651</activityid>
+            <activityinstanceid>1248720</activityinstanceid>
+            <activitytitle>Príprava požiadavky</activitytitle>
+            <businessprocessinstanceid>164082</businessprocessinstanceid>
+            <created>2018-02-02 15:36:56.273</created>
+            <creatorid>1</creatorid>
+            <finalstatetitle>V príprave</finalstatetitle>
+            <note></note>
+            <personname>Marcin Matej</personname>
+            <reasoning></reasoning>
+            <state>preparing</state>
+            <userid>1</userid>
+          </ApprovalHistoryItem>
+        </ApprovalHistoryItems>
+      </tableData>
+    </datatable>
+  </datatables>
 </DocumentData>
