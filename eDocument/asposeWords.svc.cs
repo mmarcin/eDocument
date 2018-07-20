@@ -77,20 +77,7 @@ namespace eDocument
             // initialise wrapper
             asposeWordsWrapper AWW = new asposeWordsWrapper(ApplicationName, FillerInputDir, TemplateName, FillerOutputDir, FillerOutputDocumentName);
 
-            // remove unused 
-            if (RemoveUnusedFields == "yes")
-            {
-                AWW.doc.MailMerge.CleanupOptions = MailMergeCleanupOptions.RemoveUnusedRegions;
-                AWW.doc.MailMerge.CleanupOptions |= MailMergeCleanupOptions.RemoveUnusedFields;
-                AWW.doc.MailMerge.CleanupOptions |= MailMergeCleanupOptions.RemoveEmptyParagraphs;
-            }
-
             LogMessageToFile("Wrapper inited");
-
-            // execute simple mail merge
-            AWW.Execute(names, values);
-
-            LogMessageToFile("Execute runned");
 
             //loop over data tables
 
@@ -131,6 +118,27 @@ namespace eDocument
 
                 LogMessageToFile("Query " + tableName + " executed");
             }
+
+            // setup removal only for the last merge operation
+            if (RemoveUnusedFields == "yes")
+            {
+                AWW.doc.MailMerge.CleanupOptions = MailMergeCleanupOptions.RemoveUnusedRegions;
+
+                if (RemoveUnusedFields == "yes")
+                {
+                    AWW.doc.MailMerge.CleanupOptions |= MailMergeCleanupOptions.RemoveUnusedFields;
+                }
+
+                if (RemoveEmptyParagraphs == "yes")
+                {
+                    AWW.doc.MailMerge.CleanupOptions |= MailMergeCleanupOptions.RemoveEmptyParagraphs;
+                }
+            }
+
+            // execute simple mail merge as a last merge operation
+            AWW.Execute(names, values);
+
+            LogMessageToFile("Execute simple values runned");
 
             // remove unused fields other way
             AWW.doc.MailMerge.DeleteFields();
