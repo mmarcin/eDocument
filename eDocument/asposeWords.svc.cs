@@ -83,6 +83,7 @@ namespace eDocument
 
             //fetch data table from XML
             var dataTableNodes = xml.SelectNodes(@"//datatables/datatable");
+            int x = 1;
             foreach (XmlNode item in dataTableNodes)
             {
 
@@ -101,41 +102,23 @@ namespace eDocument
                     oWriter.Flush();
                 }
 
+                // Remove unused regions onlu for the last Execute regions
+                if (x == dataTableNodes.Count)
+                {
+                    AWW.RemoveUnusedRegions();
+                }
+
                 AWW.ExecuteRegions(dataTableDS);
 
                 LogMessageToFile("Region " + tableName + " executed");
-            }
-             
-            //loop over queries
-            var queryNodes = xml.SelectNodes(@"//queries/query");
-            foreach (XmlNode item in queryNodes)
-            {
 
-
-                string sqlStatement = item.SelectSingleNode("./sql").InnerText;
-                string tableName = item.SelectSingleNode("./tableName").InnerText;                
-                AWW.ExecuteRegionsSQL(sqlStatement, tableName);
-
-                LogMessageToFile("Query " + tableName + " executed");
+                x++;
             }
 
-            // setup removal only for the last merge operation
-            if (RemoveUnusedFields == "yes")
-            {
-                AWW.doc.MailMerge.CleanupOptions = MailMergeCleanupOptions.RemoveUnusedRegions;
+            // Remove unused fields for the simple execute
+            AWW.RemoveUnusedFields();
+            AWW.RemoveEmptyParagraphs();
 
-                if (RemoveUnusedFields == "yes")
-                {
-                    AWW.doc.MailMerge.CleanupOptions |= MailMergeCleanupOptions.RemoveUnusedFields;
-                }
-
-                if (RemoveEmptyParagraphs == "yes")
-                {
-                    AWW.doc.MailMerge.CleanupOptions |= MailMergeCleanupOptions.RemoveEmptyParagraphs;
-                }
-            }
-
-            // execute simple mail merge as a last merge operation
             AWW.Execute(names, values);
 
             LogMessageToFile("Execute simple values runned");
